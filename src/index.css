@@ -1,0 +1,179 @@
+@import 'tailwindcss';
+@custom-variant dark (&:where(.dark, .dark *));
+
+@plugin "@tailwindcss/forms";
+
+html,
+body,
+#root {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+/* Thin */
+@font-face {
+	font-family: 'Acronym';
+	src: url('/fonts/Acronym Thin.otf');
+	font-weight: 100;
+	font-style: normal;
+}
+
+/* Regular */
+@font-face {
+	font-family: 'Acronym';
+	src: url('/fonts/Acronym.otf');
+	font-weight: 400;
+	font-style: normal;
+}
+
+/* Bold */
+@font-face {
+	font-family: 'Acronym';
+	src: url('/fonts/Acronym Bold.otf');
+	font-weight: 700;
+	font-style: normal;
+}
+
+/* ExtraBold */
+@font-face {
+	font-family: 'Acronym';
+	src: url('/fonts/Acronym ExtraBlack.otf');
+	font-weight: 800;
+	font-style: normal;
+}
+
+@theme {
+	--font-sans: 'Acronym', sans-serif;
+}
+
+/* Animation for the blob effect */
+@keyframes blob {
+	0% {
+		transform: translate(0px, 0px) scale(1);
+	}
+	33% {
+		transform: translate(30px, -50px) scale(1.1);
+	}
+	66% {
+		transform: translate(-20px, 20px) scale(0.9);
+	}
+	100% {
+		transform: translate(0px, 0px) scale(1);
+	}
+}
+
+.animate-blob {
+	animation: blob 7s infinite;
+}
+
+.animation-delay-2000 {
+	animation-delay: 2s;
+}
+
+/* Smooth transitions */
+* {
+	transition: all 0.3s ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+	.hero-content {
+		text-align: center;
+	}
+}
+
+/* Custom subtitle styling */
+.subtitle-container {
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+	font-family: 'Acronym', sans-serif;
+	transition: opacity 0.3s ease;
+}
+
+/* Responsive subtitle sizing */
+@media (max-width: 768px) {
+	.subtitle-text {
+		font-size: 16px;
+		padding: 8px 12px;
+	}
+}
+
+/* Mobile fullscreen optimizations */
+@media (max-width: 768px) {
+	/* Ensure video fills the screen in landscape mode */
+	.player-fullscreen video {
+		object-fit: cover !important;
+	}
+
+	/* Adjust subtitle position for mobile */
+	.subtitle-container {
+		bottom: 80px !important;
+	}
+
+	/* Make controls more touch-friendly */
+	.player-controls button {
+		padding: 12px !important;
+	}
+
+	/* Increase hit area for touch controls */
+	input[type='range'] {
+		height: 8px !important;
+	}
+}
+
+/* Prevent body scrolling when video is playing on mobile */
+body.player-fullscreen {
+	overflow: hidden;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+}
+
+.dark {
+	color-scheme: dark;
+}
+
+/* Responsive video container for 16:9 aspect ratio */
+.video-responsive-wrapper {
+	position: relative;
+	width: 100%;
+	padding-top: 56.25%; /* 16:9 Aspect Ratio */
+	background-color: #000; /* Optional: background for loading */
+}
+
+/* Style the div that the Vimeo player will attach to */
+.video-responsive-wrapper > div {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/* Add these to your global CSS file */
+.media-card-container {
+    contain: layout style paint;
+}
+
+.media-card-expanded {
+    will-change: transform, opacity;
+    transform-origin: center center;
+}
+
+.scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+
+.scroll-snap-align-start {
+    scroll-snap-align: start;
+}
+
+/* Smooth scrolling for the carousel */
+.scrollbar-hide {
+    scroll-behavior: smooth;
+}

@@ -1,0 +1,294 @@
+{
+	"header": {
+		"movies": "FILMS",
+		"shows": "SÉRIES",
+		"live": "EN DIRECT",
+		"documentaries": "DOCUMENTAIRES",
+		"watchParty": "WATCH PARTY",
+		"becomeCreator": "DEVENIR CRÉATEUR",
+		"creatorPortal": "PORTAIL CRÉATEUR",
+		"adminPortal": "PORTAIL ADMIN",
+		"subscribe": "S'abonner",
+		"myProfile": "MON PROFIL",
+		"viewingAs": "Connecté en tant que :",
+		"childProfile": "(Enfant)",
+		"noSubscription": "Aucun abonnement actif",
+		"subscribeNow": "S'abonner maintenant",
+		"subscribeNowArrow": "S'abonner maintenant →",
+		"subscriptionPlan": "Forfait {{plan}}",
+		"savedContent": "Contenu sauvegardé",
+		"switchProfile": "Changer de profil :",
+		"manageProfiles": "Gérer les profils",
+		"logout": "Déconnexion",
+		"signIn": "CONNEXION",
+		"signUp": "INSCRIPTION",
+		"searchPlaceholder": "Rechercher des films et séries..."
+	},
+	"joinJourney": {
+		"title": "Rejoignez notre révolution.",
+		"subtitle": "E-mails ultra-rapides. Recevez des mises à jour exclusives en rejoignant notre liste de diffusion.",
+		"emailPlaceholder": "Saisissez votre adresse e-mail",
+		"joinButton": "REJOINDRE",
+		"thankYouAlert": "Merci pour votre inscription !"
+	},
+	"featuresSection": {
+		"tagline": "DIVERTISSEZ-VOUS",
+		"title": "Le streaming à portée de main",
+		"subtitle": "Une nouvelle et passionnante <1>bibliothèque de streaming mondiale.</1>",
+		"features": {
+			"worldwide": {
+				"title": "Accès <1>mondial</1>",
+				"description": "Profitez d'un accès mondial sans restriction à notre contenu où que vous alliez.\n De Kédougou au Cap."
+			},
+			"stream": {
+				"title": "Optimisation du <1>flux</1>",
+				"description": "Streaming ultra-fluide grâce à nos protocoles de serveur ultra-rapides."
+			},
+			"library": {
+				"title": "Index de la <1>bibliothèque</1>",
+				"description": "Découvrez notre vaste index de bibliothèque, même sur le Wi-Fi public."
+			}
+		}
+	},
+	"curatedSelection": {
+		"tagline": "POUR VOTRE CONSIDÉRATION",
+		"title": "Notre Sélection",
+		"browseButton": "PARCOURIR NOTRE CATALOGUE",
+		"rating": "TV-G"
+	},
+	"homePage": {
+		"hero": {
+			"goToSlide": "Aller à la diapositive {{slideNumber}}"
+		},
+		"heroActions": {
+			"watchNow": "REGARDER MAINTENANT",
+			"learnMore": "EN SAVOIR PLUS"
+		},
+		"contentCarousel": {
+			"viewAll": "Tout voir"
+		},
+		"content": {
+			"continueWatching": "Continuer à regarder",
+			"recommended": "Recommandé pour vous",
+			"popularMovies": "Films populaires",
+			"bingeWorthy": "Séries à dévorer",
+			"onlyOnKemet": "Seulement sur Kemet"
+		},
+		"showCategory": {
+			"browseByCategory": "Parcourir par catégorie"
+		}
+	},
+	"search": {
+		"placeholder": "Rechercher des films, séries, acteurs...",
+		"moviesPlaceholder": "Rechercher des films par titre, acteur, etc...",
+		"showsPlaceholder": "Rechercher des séries par titre, acteur...",
+		"livePlaceholder": "Rechercher des {{category}} en direct...",
+		"documentariesPlaceholder": "Rechercher des documentaires par titre, sujet..."
+	},
+	"categories": {
+		"all": "Tous",
+		"action": "Action",
+		"adventure": "Aventure",
+		"animation": "Animation",
+		"comedy": "Comédie",
+		"crime": "Crime",
+		"documentary": "Documentaire",
+		"drama": "Drame",
+		"family": "Famille",
+		"fantasy": "Fantaisie",
+		"historical": "Historique",
+		"horror": "Horreur",
+		"music": "Musique",
+		"mystery": "Mystère",
+		"romance": "Romance",
+		"sciFi": "Science-Fiction",
+		"sports": "Sport",
+		"thriller": "Thriller",
+		"war": "Guerre",
+		"history": "Histoire",
+		"tech": "Technologie",
+		"documentariesPlaceholder": "Rechercher des documentaires par titre, sujet..."
+	},
+	"movieCatalog": {
+		"title": "Films",
+		"description": "Parcourez notre collection de films africains, de séries télévisées et d'originaux Kemet. C'est vendredi après-midi à Dakar, le moment idéal pour trouver quelque chose pour le week-end !",
+		"noResultsTitle": "Aucun film trouvé",
+		"noResultsSubtitle": "Essayez d'ajuster votre recherche ou vos filtres de genre."
+	},
+	"showCatalog": {
+		"title": "Séries",
+		"description": "Le week-end est presque là à Dakar ! Il est temps de trouver votre prochaine série à dévorer.",
+		"noResultsTitle": "Aucune série trouvée",
+		"noResultsSubtitle": "Veuillez essayer une autre recherche ou un autre filtre de genre."
+	},
+	"liveCatalog": {
+		"moviesTab": "FILMS",
+		"showsTab": "SÉRIES TÉLÉ",
+		"nowStreaming": "En direct maintenant",
+		"allSectionTitle": "Tous les {{category}}",
+		"noResultsTitle": "Aucun contenu trouvé",
+		"noResultsSubtitle": "Essayez d'ajuster votre recherche, vos genres ou vos filtres d'onglet.",
+		"movies": "Films",
+		"shows": "Séries"
+	},
+	"documentaryCatalog": {
+		"title": "Documentaires",
+		"description": "C'est vendredi après-midi à Dakar. Le moment idéal pour explorer des histoires africaines perspicaces et des originaux Kemet.",
+		"noResultsTitle": "Aucun documentaire trouvé",
+		"noResultsSubtitle": "Veuillez essayer d'ajuster votre recherche ou vos filtres de genre."
+	},
+	"languages": {
+		"English": "Anglais",
+		"French": "Français",
+		"Wolof": "Wolof"
+	},
+	"detailsPage": {
+		"itemNotFound": "Élément non trouvé",
+		"goHome": "Retour à l'accueil",
+		"play": "Lecture",
+		"trailer": "Bande-annonce",
+		"removeFromList": "Retirer de ma liste",
+		"addToList": "Ajouter à ma liste",
+		"cast": "Distribution",
+		"moreCast": "+{{count}} de plus",
+		"production": "Production",
+		"directorLabel": "Réalisateur :",
+		"seasons_one": "{{count}} saison",
+		"seasons_other": "{{count}} saisons",
+		"details": "Détails",
+		"typeLabel": "Type :",
+		"qualityLabel": "Qualité :",
+		"featuresLabel": "Caractéristiques :",
+		"languagesLabel": "Langues :",
+		"moreLikeThis": "Plus de titres similaires",
+		"youMightAlsoLike": "Vous pourriez aussi aimer"
+	},
+	"pricing": {
+		"accessOptionsTitle": "Options d'accès",
+		"currentPlan": "PLAN ACTUEL",
+		"currencyFCFA": "FCFA",
+		"orInUSD": "ou ${{priceUSD}} en devise américaine",
+		"currentlyActive": "ACTUELLEMENT ACTIF",
+		"switchPlan": "CHANGER DE PLAN",
+		"dailyPlan": {
+			"title": "Forfait Journalier",
+			"period": "par jour"
+		},
+		"weeklyPlan": {
+			"title": "Forfait Hebdomadaire",
+			"period": "par semaine"
+		},
+		"monthlyBundle": {
+			"title": "Offre Mensuelle",
+			"period": "par mois"
+		},
+		"subscribeButton": "S'ABONNER"
+	},
+	"pricingSection": {
+		"tagline": "CINÉMA SANS FRONTIÈRES",
+		"title": "Rejoignez notre aventure !"
+	},
+	"auth": {
+		"emailLabel": "Adresse e-mail",
+		"emailPlaceholder": "vous@exemple.com",
+		"passwordLabel": "Mot de passe",
+		"passwordPlaceholder": "mot de passe",
+		"recaptcha": "Cette page est protégée par Google reCAPTCHA. <1>En savoir plus.</1>",
+		"signIn": {
+			"title": "Heureux de vous revoir",
+			"subtitle": "Connectez-vous pour continuer.",
+			"rememberMe": "Se souvenir de moi",
+			"forgotPassword": "Mot de passe oublié ?",
+			"button": "Se connecter",
+			"noAccount": "Vous n'avez pas de compte ? <1>S'inscrire</1>",
+			"errorMessage": "E-mail ou mot de passe invalide. Veuillez réessayer."
+		},
+		"signUp": {
+			"title": "Créez votre compte",
+			"subtitle": "Rejoignez-nous et commencez votre aventure.",
+			"button": "S'inscrire",
+			"hasAccount": "Vous avez déjà un compte ? <1>Se connecter</1>"
+		}
+	},
+	"watchParty": {
+		"kemetOriginals": "Originaux Kemet",
+		"menu": {
+			"title": "Démarrer une Watch Party",
+			"subtitle": "Rassemblez vos amis et votre famille pour regarder vos films et séries préférés ensemble en temps réel.",
+			"createRoomButton": "Créer un salon",
+			"joinRoomButton": "Rejoindre un salon",
+			"featuresTitle": "Fonctionnalités de la Watch Party",
+			"syncPlayingTitle": "Lecture synchronisée",
+			"syncPlayingDesc": "Regardez ensemble en parfaite synchronisation avec vos amis, où qu'ils soient.",
+			"realtimeChatTitle": "Chat en temps réel",
+			"realtimeChatDesc": "Partagez vos réactions et commentaires instantanément avec le chat intégré.",
+			"easySharingTitle": "Partage facile",
+			"easySharingDesc": "Partagez les liens du salon en un clic pour inviter des amis à rejoindre votre fête.",
+			"groupWatchingTitle": "Visionnage en groupe",
+			"groupWatchingDesc": "Profitez des films et séries avec jusqu'à 10 amis simultanément."
+		},
+		"create": {
+			"title": "Choisissez quoi regarder",
+			"mediaNotFoundAlert": "Erreur : Contenu multimédia non trouvé."
+		},
+		"join": {
+			"title": "Rejoindre une Watch Party",
+			"enterRoomPlaceholder": "Entrer l'ID du salon",
+			"joinButton": "Rejoindre",
+			"roomNotFoundAlert": "Salon non trouvé. Veuillez vérifier l'ID.",
+			"publicRoomsTitle": "Salons publics disponibles",
+			"watchingLabel": "En train de regarder :",
+			"hostLabel": "Hôte :",
+			"participantsLabel": "Participants :"
+		},
+		"chat": {
+			"title": "Chat en direct",
+			"roomLabel": "Salon :",
+			"placeholder": "Écrire un message...",
+			"currentUser": "Vous",
+			"mockMessage1": "Salut tout le monde ! Content que vous ayez pu venir.",
+			"mockMessage2": "Génial, ce film est super !",
+			"mockMessage3": "Est-ce que le son est un peu bas pour vous aussi ?"
+		},
+		"room": {
+			"roomNotFoundTitle": "Salon non trouvé",
+			"roomNotFoundDesc": "Le salon de watch party que vous recherchez n'existe pas.",
+			"contentNotFoundTitle": "Contenu non trouvé",
+			"contentNotFoundDesc": "Le contenu de cette watch party n'a pas pu être chargé ou il manque un ID Vimeo.",
+			"backButton": "Retour aux Watch Parties",
+			"goBackLabel": "Retour",
+			"hostLabel": "Hôte :",
+			"participants_one": "{{count}} Participant",
+			"participants_other": "{{count}} Participants",
+			"participantsParentheses": "Participants ({{count}})",
+			"roomCodeLabel": "Code du salon :",
+			"shareRoom": "Partager le salon",
+			"copyLink": "Copier le lien",
+			"copyCode": "Copier le code",
+			"leaveRoom": "Quitter le salon",
+			"settingsTitle": "Paramètres du salon",
+			"hideChat": "Cacher le chat",
+			"showChat": "Afficher le chat"
+		}
+	},
+	"footer": {
+		"inquiriesTitle": "Des questions? Appelez le +1 111-111-1111",
+		"inquiriesText": "Appelez-nous pour une discussion rapide ou si vous avez des questions.",
+		"kemetUniverse": "UNIVERS KEMET",
+		"whoWeAre": "Qui sommes-nous",
+		"ourUniverse": "Notre univers",
+		"manifesto": "Manifeste",
+		"contactUs": "Contactez-nous",
+		"support": "SUPPORT",
+		"partnerProgram": "Programme partenaire",
+		"infoCenter": "Centre d'information",
+		"supportChat": "Chat d'assistance",
+		"account": "Compte",
+		"legalese": "LÉGAL",
+		"privacyPolicy": "Politique de confidentialité",
+		"termsOfUse": "Conditions d'utilisation",
+		"legalNotice": "Mentions légales",
+		"copyright": "© {{year}} KEMET | Une révolution cinématographique",
+		"welcome": "Bienvenue au cinéma social"
+	}
+}

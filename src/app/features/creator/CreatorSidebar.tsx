@@ -1,0 +1,102 @@
+import logoBlack from '/images/misc/KEMET Black Bigger.png'
+import logoWhite from '/images/misc/KEMET White Bigger.png'
+import {
+	ArrowLeftToLine,
+	BarChart3,
+	DollarSign,
+	UploadCloud,
+	Video
+} from 'lucide-react'
+import { useContext } from 'react'
+import { Link } from 'react-router-dom'
+
+import { ThemeContext } from '../../contexts/ThemeContext.ts'
+
+interface CreatorSidebarProps {
+	activeTab: string
+	onTabChange: (tab: string) => void
+	isCollapsed: boolean
+}
+
+const navItems = [
+	{ id: 'content', label: 'My Content', icon: Video },
+	{ id: 'revenue', label: 'Revenue', icon: DollarSign },
+	{ id: 'analytics', label: 'Analytics', icon: BarChart3 },
+	{ id: 'upload', label: 'Upload', icon: UploadCloud }
+]
+
+function CreatorSidebar({
+	activeTab,
+	onTabChange,
+	isCollapsed
+}: CreatorSidebarProps) {
+	const themeContext = useContext(ThemeContext)
+	if (!themeContext)
+		throw new Error('Header must be used within a ThemeProvider')
+	const { theme } = themeContext
+
+	const currentLogo = theme === 'dark' ? logoWhite : logoBlack
+
+	return (
+		<aside
+			className={`fixed top-4 left-4 mt-2 flex h-[calc(100vh-3rem)] flex-col rounded-2xl bg-white shadow-xl transition-all duration-300 ease-in-out dark:bg-zinc-800 ${
+				isCollapsed ? 'w-20' : 'w-64'
+			}`}
+		>
+			<div
+				className={`mb-2 flex items-center border-b border-gray-100 p-4 dark:border-zinc-700 ${
+					isCollapsed ? 'justify-center' : 'justify-start'
+				}`}
+			>
+				<img src={currentLogo} alt='logo' width='40' height='40' />
+				{!isCollapsed && (
+					<div className='ml-3 flex items-baseline overflow-hidden'>
+						<span className='text-xl font-bold text-gray-900 dark:text-white'>
+							Creator
+						</span>
+					</div>
+				)}
+			</div>
+
+			<nav className='flex-1 p-2'>
+				<ul>
+					{navItems.map((item) => (
+						<li key={item.id} className='mb-2'>
+							<button
+								onClick={() => onTabChange(item.id)}
+								className={`flex w-full items-center rounded-lg p-3 text-sm font-medium transition-colors ${
+									isCollapsed ? 'justify-center' : ''
+								} ${
+									activeTab === item.id
+										? 'bg-purple-600 text-white shadow'
+										: 'text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-zinc-700'
+								}`}
+								title={item.label}
+							>
+								<item.icon size={20} className={!isCollapsed ? 'mr-3' : ''} />
+								{!isCollapsed && <span>{item.label}</span>}
+							</button>
+						</li>
+					))}
+				</ul>
+			</nav>
+
+			<div
+				className={`mt-auto border-t border-gray-100 p-4 dark:border-zinc-700 ${
+					isCollapsed ? 'flex justify-center' : ''
+				}`}
+			>
+				<Link
+					to='/'
+					className='flex items-center text-gray-600 hover:text-purple-600 dark:text-gray-400 dark:hover:text-purple-400'
+					title='Back to Main Site'
+				>
+					<ArrowLeftToLine size={20} className={!isCollapsed ? 'mr-2' : ''} />
+					{!isCollapsed && <span className='text-sm'>Back to Main Site</span>}
+				</Link>
+			</div>
+		</aside>
+	)
+}
+
+export default CreatorSidebar

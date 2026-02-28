@@ -1,0 +1,300 @@
+{
+	"header": {
+		"movies": "FILM YI",
+		"shows": "SÉRIE YI",
+		"live": "DIRECT",
+		"documentaries": "DOCUMENTAIRE YI",
+		"watchParty": "SEETAAN AK ÑENEEN",
+		"becomeCreator": "NEKK ASAF",
+		"creatorPortal": "UBBIKAAYU ASAFU",
+		"adminPortal": "UBBIKAAYU ADMIN",
+		"subscribe": "Abonne wu",
+		"myProfile": "SAMA PROFIL",
+		"viewingAs": "Yaa ngi seetaan niki :",
+		"childProfile": "(Xale)",
+		"noSubscription": "Abonnement amul",
+		"subscribeNow": "Abonne wu léegi",
+		"subscribeNowArrow": "Abonne wu léegi →",
+		"subscriptionPlan": "Abonnement {{plan}}",
+		"savedContent": "Li nga denc",
+		"switchProfile": "Soppi profil :",
+		"manageProfiles": "Saytu profil yi",
+		"logout": "Genn",
+		"signIn": "DUGG",
+		"signUp": "BIND U",
+		"searchPlaceholder": "Seet film ak séri..."
+	},
+	"joinJourney": {
+		"title": "Bokk ci sunu jeego.",
+		"subtitle": "Email bu gaaw. Jottal ay xibaar yu fées suñu limu email.",
+		"emailPlaceholder": "Bindal fi sa email",
+		"joinButton": "BOKKAL",
+		"thankYouAlert": "Jërëjëf ci li nga bindu !"
+	},
+	"featuresSection": {
+		"tagline": "BÉGAL SA BOPP",
+		"title": "Streaming ci sa loxo",
+		"subtitle": "Ab armeel bu bees, bu am solo, bu <1>streaming ci àdduna sépp.</1>",
+		"features": {
+			"worldwide": {
+				"title": "Jot ci <1>àdduna sépp</1>",
+				"description": "Bégal sa bopp ak sunuy film ci àdduna sépp. Fu mu mën di nekk, \n Kédougou ba Cape Town."
+			},
+			"stream": {
+				"title": "Gënal <1>seetaan bi</1>",
+				"description": "Seetaan bu neex te gaaw ndax sunuy server yuñu tek ci yoon."
+			},
+			"library": {
+				"title": "Limu <1>armeel bi</1>",
+				"description": "Gisal sunu armeel bu rëy, mën nga ko seet sax ak Wi-Fi bu kenn bokk."
+			}
+		}
+	},
+	"curatedSelection": {
+		"tagline": "NGIR SA XOOL",
+		"title": "Sunu Tànneef",
+		"browseButton": "SEETAL SUNU ARMEEL",
+		"rating": "TV-G"
+	},
+	"homePage": {
+		"hero": {
+			"goToSlide": "Dem ci slide {{slideNumber}}"
+		},
+		"heroActions": {
+			"watchNow": "SEETAAN LÉegi",
+			"learnMore": "XAMAL SA BOPP"
+		},
+		"contentCarousel": {
+			"viewAll": "Seet lépp"
+		},
+		"content": {
+			"continueWatching": "Wéyal seetaan bi",
+			"recommended": "Liñu la digal",
+			"popularMovies": "Film yi gëna siiw",
+			"bingeWorthy": "Séri yu neex a topp",
+			"onlyOnKemet": "Ci Kemet rekk"
+		},
+		"showCategory": {
+			"browseByCategory": "Seet ci Càll"
+		}
+	},
+	"search": {
+		"placeholder": "Seet film, séri, ak akteer...",
+		"moviesPlaceholder": "Seet film ci tur, akteer, etc...",
+		"showsPlaceholder": "Seet séri ci tur, akteer...",
+		"livePlaceholder": "Seetal {{category}} ci direct...",
+		"documentariesPlaceholder": "Seet dokimanteer ci tur, waxtaan..."
+	},
+	"categories": {
+		"all": "Yépp",
+		"action": "Jëf",
+		"adventure": "Awantir",
+		"animation": "Animasiyoŋ",
+		"comedy": "Koomedi",
+		"crime": "Kirim",
+		"documentary": "Dokimanteer",
+		"drama": "Daraama",
+		"family": "Njiboot",
+		"fantasy": "Fantasi",
+		"historical": "Taariix",
+		"horror": "Titaange",
+		"music": "Muzik",
+		"mystery": "Mistéer",
+		"romance": "Romas",
+		"sciFi": "Sayas-fiksiyoŋ",
+		"sports": "Spóor",
+		"thriller": "Tirileer",
+		"war": "Xare",
+		"history": "Taariix",
+		"tech": "Teknoolosi",
+		"nature": "Natuur",
+		"biography": "Dundu",
+		"politics": "Polotig",
+		"socialIssues": "Jafe-jafey askan wi",
+		"travel": "Tukki",
+		"art": "Aart",
+		"science": "Sayas"
+	},
+	"movieCatalog": {
+		"title": "Film yi",
+		"description": "Seetal sunu armeel bu fees ak film yu Afrik, séri, ak Kemet Originals. Tàllata ngoon la ci Dakaar, waxtu wu baax ngir wut lu nga seetaan ci wikéen bi !",
+		"noResultsTitle": "Gisuñu Been Film",
+		"noResultsSubtitle": "Jéemaatal sa seet walla soppi sa càllu film."
+	},
+	"showCatalog": {
+		"title": "Séri yi",
+		"description": "Wikéen bi jege nañu fi ci Dakaar ! Joot na ngir wut séri bu neex bi ngay topp.",
+		"noResultsTitle": "Gisuñu Been Séri",
+		"noResultsSubtitle": "Jéemaatal sa seet walla soppi sa càllu séri."
+	},
+	"liveCatalog": {
+		"moviesTab": "FILM YI",
+		"showsTab": "SÉRI YI",
+		"nowStreaming": "Ci Direct Léegi",
+		"allSectionTitle": "{{category}} yépp",
+		"noResultsTitle": "Gisuñu Dara",
+		"noResultsSubtitle": "Jéemaatal sa seet, sa càll, walla sa onglet.",
+		"movies": "Film yi",
+		"shows": "Séri yi"
+	},
+	"documentaryCatalog": {
+		"title": "Dokimanteer yi",
+		"description": "Tàllata ngoon la fi ci Dakaar. Waxtu wu baax ngir gëstu ay nettali yu am soloy Afrik ak Kemet Originals.",
+		"noResultsTitle": "Gisuñu Been Dokimanteer",
+		"noResultsSubtitle": "Jéemaatal sa seet walla soppi sa càllu dokimanteer."
+	},
+	"languages": {
+		"English": "Àngale",
+		"French": "Farañse",
+		"Wolof": "Wolof"
+	},
+	"detailsPage": {
+		"itemNotFound": "Gisuñu fi dara",
+		"goHome": "Dellu ci xët wu njëkk",
+		"play": "Tàmbli",
+		"trailer": "Bànd-anoos",
+		"removeFromList": "Jëllee ci sama lim",
+		"addToList": "Tegal ci sama lim",
+		"cast": "Akteer yi",
+		"moreCast": "+{{count}} yeneen",
+		"production": "Prodiksiyoŋ",
+		"directorLabel": "Realisatëër :",
+		"seasons_one": "{{count}} sesoŋ",
+		"seasons_other": "{{count}} sesoŋ",
+		"details": "Détails",
+		"typeLabel": "Kalaas :",
+		"qualityLabel": "Kwalite :",
+		"featuresLabel": "Melokaan :",
+		"languagesLabel": "Kàllaama :",
+		"moreLikeThis": "Yu ni mel",
+		"youMightAlsoLike": "Mën nga sopp yii itam"
+	},
+	"pricing": {
+		"accessOptionsTitle": "Noonu Jote ci Kemet",
+		"currentPlan": "ABONNEMENT BI NGA NEKK",
+		"currencyFCFA": "FCFA",
+		"orInUSD": "walla ${{priceUSD}} ci xaalisu Amerig",
+		"currentlyActive": "LII MOO NEK CI YAW LÉegi",
+		"switchPlan": "SOPPI ABONNEMENT",
+		"dailyPlan": {
+			"title": "Abonnementu Bés",
+			"period": "bés bu nekk"
+		},
+		"weeklyPlan": {
+			"title": "Abonnementu Ayubés",
+			"period": "ayubés bu nekk"
+		},
+		"monthlyBundle": {
+			"title": "Abonnementu Weer",
+			"period": "weer wu nekk"
+		},
+		"subscribeButton": "ABONNE WU"
+	},
+	"pricingSection": {
+		"tagline": "SINEMA AMULI DIG",
+		"title": "Bokkal ci sunu tukki !"
+	},
+	"auth": {
+		"emailLabel": "Sa email",
+		"emailPlaceholder": "sa-email@misal.com",
+		"passwordLabel": "Sa baatu-jàll",
+		"passwordPlaceholder": "baatu-jàll",
+		"recaptcha": "Google reCAPTCHA moo kaaraange xët wii. <1>Xamal sa bopp.</1>",
+		"signIn": {
+			"title": "Dalal-jàmm ci Kemet",
+			"subtitle": "Duggal sa kont ngir wéy.",
+			"rememberMe": "Fàttaliku ma",
+			"forgotPassword": "Fàtte nga sa baatu-jàll ?",
+			"button": "Dugg",
+			"noAccount": "Amuloo kont ? <1>Bindu</1>",
+			"errorMessage": "Email bi walla baatu-jàll bi baaxul. Jéemaatal."
+		},
+		"signUp": {
+			"title": "Sosàl sa kont",
+			"subtitle": "Bokkal ci ñun te door sa tukki.",
+			"button": "Bindu",
+			"hasAccount": "Am nga kont ba noppi ? <1>Dugg</1>"
+		}
+	},
+	"watchParty": {
+		"kemetOriginals": "Kemet Originals",
+		"menu": {
+			"title": "Door Watch Party",
+			"subtitle": "Booloo ak sa ay xarit ak sa njaboot ngir seetaan film ak séri yi ngeen bëgg, ci jamono jile.",
+			"createRoomButton": "Sos ab salon",
+			"joinRoomButton": "Bokk ci ab salon",
+			"featuresTitle": "Melokaanu Watch Party",
+			"syncPlayingTitle": "Seetaan gu ànd",
+			"syncPlayingDesc": "Seetaanleen ànd ak sa ay xarit ci sink bu mucc ayib, fu ngeen men di nekk.",
+			"realtimeChatTitle": "Waxtaan ci direct",
+			"realtimeChatDesc": "Séddoolleen seen xalaat ak kaddu ci cat bi.",
+			"easySharingTitle": "Séddoo gu yomb",
+			"easySharingDesc": "Séddoolleen linku salon bi ci benn klik ngir woo ay xarit.",
+			"groupWatchingTitle": "Seetaan mbooloo",
+			"groupWatchingDesc": "Bégalleen seen bopp ak film yi ak séri yi ak ba 10 xarit ci benn yoon."
+		},
+		"create": {
+			"title": "Tànnal li nga bëgg seetaan",
+			"mediaNotFoundAlert": "Njuumte : Gisuñu film bi."
+		},
+		"join": {
+			"title": "Bokk ci Watch Party",
+			"enterRoomPlaceholder": "Duggal ID salon bi",
+			"joinButton": "Bokk",
+			"roomNotFoundAlert": "Gisuñu salon bi. Jéemaatal ak beneen ID.",
+			"publicRoomsTitle": "Salon yu ubbeeku",
+			"watchingLabel": "Li ngeen di seetaan :",
+			"hostLabel": "Ganaay gi:",
+			"participantsLabel": "Bokkat yi :"
+		},
+		"chat": {
+			"title": "Waxtaan ci Direct",
+			"roomLabel": "Salon bi :",
+			"placeholder": "Bindal ab bataaxal...",
+			"currentUser": "Yow",
+			"mockMessage1": "Salaam ñépp ! Kontaan naa ci li ngeen ñëw.",
+			"mockMessage2": "Ambiyaas neex na, film bi saf na !",
+			"mockMessage3": "Ndax son bi dafa wàññiku ci yeen itam ?"
+		},
+		"room": {
+			"roomNotFoundTitle": "Gisuñu Salon Bi",
+			"roomNotFoundDesc": "Salon watch party bi ngay wut amul.",
+			"contentNotFoundTitle": "Gisuñu Film Bi",
+			"contentNotFoundDesc": "Film bi waroon ci watch party bi mënul ubbeeku walla ID Vimeo amul.",
+			"backButton": "Dellu ci Watch Parties",
+			"goBackLabel": "Dellu",
+			"hostLabel": "Ganaay gi :",
+			"participants_one": "{{count}} bokkat",
+			"participants_other": "{{count}} bokkat",
+			"participantsParentheses": "Bokkat yi ({{count}})",
+			"roomCodeLabel": "Kodu salon bi :",
+			"shareRoom": "Séddoo salon bi",
+			"copyLink": "Kopié link bi",
+			"copyCode": "Kopié kod bi",
+			"leaveRoom": "Genn salon bi",
+			"settingsTitle": "Parametaru salon bi",
+			"hideChat": "Nëbb waxtaan bi",
+			"showChat": "Wone waxtaan bi"
+		}
+	},
+	"footer": {
+		"inquiriesTitle": "Am nga laaj? Woo +1 111-111-1111",
+		"inquiriesText": "Woo ñu ngir waxtaan bu gaaw walla su fekkee am nga laaj.",
+		"kemetUniverse": "ADUNA KEMET",
+		"whoWeAre": "Ñun Ñan Lañu",
+		"ourUniverse": "Sunu Aduna",
+		"manifesto": "Manifesto",
+		"contactUs": "Jokko ak Ñun",
+		"support": "NDIMBAL",
+		"partnerProgram": "Programme partenaire",
+		"infoCenter": "Xibaarukaay",
+		"supportChat": "Waxtaanu Ndimbal",
+		"account": "Kont",
+		"legalese": "Yoon",
+		"privacyPolicy": "Politigu Sutura",
+		"termsOfUse": "Sartu Jëfandikoo",
+		"legalNotice": "Yëgle bu Yoon",
+		"copyright": "© {{year}} KEMET | Ab Jeegu ci Sinema",
+		"welcome": "Dalal-jàmm ci Sinema Sosiaal"
+	}
+}
