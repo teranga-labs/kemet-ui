@@ -1,26 +1,20 @@
 import { useState } from 'react'
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from 'react-i18next'
 
-
-
-import Hero from '../../../components/common/Hero.tsx';
-import SearchField from '../../../components/common/SearchField.tsx';
-import SearchOverlay from '../../../components/common/SearchOverlay.tsx';
-import SearchResults from '../../../components/common/SearchResults.tsx';
-import Footer from '../../../components/layout/Footer.tsx';
-import Header from '../../../components/layout/Header.tsx';
-import { useAiRecommendations } from '../../../hooks/useAiRecommendations.ts';
-import { useAuth } from '../../../hooks/useAuth.ts';
-import { allItems, type MediaItem } from '../../../../data/shows.ts';
-import Content from '../components/Content.tsx';
-import CuratedSelection from '../components/CurratedSelection.tsx';
-import FeaturesSection from '../components/FeaturesSection.tsx';
-import JoinJourney from '../components/JoinJourney.tsx';
-import PricingSection from '../components/PricingSection.tsx';
-
-
-
-
+import { allItems, type MediaItem } from '../../../../data/shows.ts'
+import Hero from '../../../components/common/Hero.tsx'
+import SearchField from '../../../components/common/SearchField.tsx'
+import SearchOverlay from '../../../components/common/SearchOverlay.tsx'
+import SearchResults from '../../../components/common/SearchResults.tsx'
+import Footer from '../../../components/layout/Footer.tsx'
+import Header from '../../../components/layout/Header.tsx'
+import { useAiRecommendations } from '../../../hooks/useAiRecommendations.ts'
+import { useAuth } from '../../../hooks/useAuth.ts'
+import Content from '../components/Content.tsx'
+import CuratedSelection from '../components/CurratedSelection.tsx'
+import FeaturesSection from '../components/FeaturesSection.tsx'
+import JoinJourney from '../components/JoinJourney.tsx'
+import PricingSection from '../components/PricingSection.tsx'
 
 function HomePage() {
 	const { t } = useTranslation()
@@ -85,7 +79,7 @@ function HomePage() {
 				<>
 					<Hero />
 					<JoinJourney />
-                    <FeaturesSection />
+					<FeaturesSection />
 					<CuratedSelection />
 					<PricingSection />
 				</>

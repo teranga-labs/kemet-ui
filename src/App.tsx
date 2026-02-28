@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 
 import Loading from './app/components/common/Loading.tsx'
-import MainNavigation from './app/components/common/MainNavigation.tsx'
+import Pill from './app/components/common/Pill.tsx'
 import AppRoutes from './app/routes/AppRoutes.tsx'
 
 function App() {
@@ -20,7 +20,7 @@ function App() {
 
 	return (
 		<div className='min-h-screen bg-black'>
-			<MainNavigation />
+			<Pill />
 
 			<div className='relative z-0'>
 				<AppRoutes />
