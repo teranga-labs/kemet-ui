@@ -8,7 +8,6 @@ import { CreditCard, Smartphone } from 'lucide-react'
 import React, { type ChangeEvent, useContext, useRef, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 
-import Footer from '../../components/layout/Footer.tsx'
 import { ThemeContext } from '../../contexts/ThemeContext.ts'
 import { useAuth } from '../../hooks/useAuth.ts'
 import { useSubscription } from '../../hooks/useSubscription.ts'
@@ -513,7 +512,6 @@ function PaymentFlowPage() {
 					</div>
 				</div>
 			</div>
-			<Footer />
 		</div>
 	)
 }

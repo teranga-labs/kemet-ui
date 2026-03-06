@@ -2,8 +2,6 @@ import { CheckCircle2, ChevronRight, Clock, TrendingUp, Users, Zap } from 'lucid
 
 
 
-import Footer from "../../components/layout/Footer.tsx";
-import Header from '../../components/layout/Header.tsx'
 
 
 
@@ -60,8 +58,7 @@ const projects = [
 
 function GreenLightPage() {
 	return (
-		<div className='min-h-screen bg-zinc-900 pt-24 text-white'>
-			<Header/>
+		<div className='min-h-screen bg-zinc-900 text-white'>
 			<div className='container mx-auto px-4 md:px-8'>
 				{/* Hero / Header */}
 				<div className='mb-16 rounded-3xl border border-purple-900/50 bg-gradient-to-br from-purple-900/40 via-black to-black p-8 text-center md:p-12'>
@@ -188,7 +185,6 @@ function GreenLightPage() {
 					</button>
 				</div>
 			</div>
-			<Footer/>
 		</div>
 
 	)

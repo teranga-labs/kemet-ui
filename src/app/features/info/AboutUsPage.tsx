@@ -2,16 +2,13 @@ import kemetSlides from '/images/misc/KEMET Slides (Edit).png'
 import kemetDevices from '/images/misc/kemet-devices.png'
 import { Clapperboard, Handshake, Rocket } from 'lucide-react'
 
-import Footer from '../../components/layout/Footer'
-import Header from '../../components/layout/Header'
 
 function AboutUsPage() {
 	return (
 		<div className='flex min-h-screen flex-col bg-white dark:bg-zinc-900'>
-			<Header />
 
 			<main className='flex-grow'>
-				<div className='relative flex h-[70vh] items-center justify-center bg-black pt-24'>
+				<div className='relative flex h-[70vh] items-center justify-center bg-black'>
 					<div className='absolute inset-0 bg-black' />
 					<div className='relative z-10 px-4 text-center'>
 						<h1 className='mb-4 text-5xl font-extrabold text-white md:text-7xl'>
@@ -93,7 +90,6 @@ function AboutUsPage() {
 					</div>
 				</div>
 			</main>
-			<Footer />
 		</div>
 	)
 }

@@ -1,8 +1,6 @@
 import { CheckCircle } from 'lucide-react'
 import { useLocation, useNavigate } from 'react-router-dom'
 
-import Footer from '../../components/layout/Footer.tsx'
-import Header from '../../components/layout/Header.tsx'
 import { useAuth } from '../../hooks/useAuth.ts'
 
 function useQuery() {
@@ -29,7 +27,6 @@ function PaymentReceiptPage() {
 	return (
 		// --- UPDATED: Background is now theme-aware ---
 		<div className='flex min-h-screen flex-col bg-white dark:bg-zinc-900'>
-			<Header />
 			<main className='mt-16 flex flex-grow items-center justify-center p-4'>
 				{/* --- UPDATED: Main card is now theme-aware --- */}
 				<div className='w-full max-w-2xl rounded-lg border border-gray-200 bg-white p-6 text-center shadow-lg sm:p-10 dark:border-zinc-700 dark:bg-zinc-800'>
@@ -103,7 +100,6 @@ function PaymentReceiptPage() {
 					</button>
 				</div>
 			</main>
-			<Footer />
 		</div>
 	)
 }

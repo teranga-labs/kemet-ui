@@ -18,9 +18,7 @@ function Hero() {
 		setCurrentSlide((prev) => (prev + 1) % heroSlides.length)
 	}
 	const goToPrev = () => {
-		setCurrentSlide(
-			(prev) => (prev - 1 + heroSlides.length) % heroSlides.length
-		)
+		setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length)
 	}
 
 	useEffect(() => {
@@ -40,7 +38,7 @@ function Hero() {
 
 	return (
 		<div {...handlers}>
-			<section className='relative h-screen w-full overflow-hidden'>
+			<section className='relative h-[85vh] w-full overflow-hidden rounded-tl-[2rem]'>
 				{heroSlides.map((slide, index) => (
 					<div
 						key={index}
@@ -58,7 +56,7 @@ function Hero() {
 				/>
 
 				<div className='absolute top-0 left-0 z-10 h-full w-full bg-black/60' />
-		
+
 				<div className='relative z-20 container mx-auto flex h-full items-center px-4 sm:px-20 lg:px-24'>
 					<div>
 						<h1 className='animate-fade-in-down mb-4 text-7xl font-extrabold text-white sm:mb-6 sm:text-4xl md:text-8xl lg:text-8xl'>
@@ -70,16 +68,11 @@ function Hero() {
 								{activeSlide.quality}
 							</span>
 							{activeSlide.features?.map((feature: string) => (
-								<span
-									key={feature}
-									className='rounded border border-gray-500 px-1.5 py-0.5 text-xs sm:px-2 sm:text-sm'
-								>
+								<span key={feature} className='rounded border border-gray-500 px-1.5 py-0.5 text-xs sm:px-2 sm:text-sm'>
 									{feature}
 								</span>
 							))}
-							<span className='text-sm sm:text-base'>
-								{activeSlide.duration}
-							</span>
+							<span className='text-sm sm:text-base'>{activeSlide.duration}</span>
 						</div>
 						<p className='animate-fade-in-up mb-6 max-w-2xl text-base text-gray-200 sm:mb-8 sm:text-lg md:text-xl'>
 							{activeSlide.description}

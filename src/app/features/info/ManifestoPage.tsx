@@ -1,7 +1,5 @@
 import { Film, Globe, Sparkles, Users } from 'lucide-react'
 
-import Footer from '../../components/layout/Footer.tsx'
-import Header from '../../components/layout/Header.tsx'
 
 const manifestoPoints = [
 	{
@@ -35,10 +33,9 @@ const manifestoPoints = [
 function ManifestoPage() {
 	return (
 		<div className='flex min-h-screen flex-col bg-white dark:bg-zinc-900'>
-			<Header />
 
 			<main className='mt-8 flex-grow'>
-				<div className='container mx-auto px-6 py-24 pt-24'>
+				<div className='container mx-auto px-6 py-24'>
 					<header className='mb-20 text-center'>
 						<h1 className='mb-4 text-5xl font-extrabold text-zinc-900 md:text-6xl dark:text-white'>
 							Our Manifesto
@@ -73,7 +70,6 @@ function ManifestoPage() {
 					</div>
 				</div>
 			</main>
-			<Footer />
 		</div>
 	)
 }

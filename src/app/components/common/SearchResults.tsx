@@ -1,5 +1,4 @@
 import type { MediaItem } from '../../../data/shows.ts'
-import Header from '../layout/Header.tsx'
 
 import MediaCard from './MediaCard.tsx'
 
@@ -12,7 +11,6 @@ interface SearchResultsProps {
 function SearchResults({ results, query, onClose }: SearchResultsProps) {
 	return (
 		<div className='fixed inset-0 z-50 overflow-y-auto bg-white dark:bg-zinc-900'>
-			<Header />
 
 			<div className='container mx-auto mt-12 px-4 pt-24 pb-8'>
 				<div className='mb-6 flex items-center justify-between'>

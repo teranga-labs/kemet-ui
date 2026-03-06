@@ -4,10 +4,7 @@ import { useTranslation } from 'react-i18next'
 import { allItems, type MediaItem } from '../../../../data/shows.ts'
 import Hero from '../../../components/common/Hero.tsx'
 import SearchField from '../../../components/common/SearchField.tsx'
-import SearchOverlay from '../../../components/common/SearchOverlay.tsx'
 import SearchResults from '../../../components/common/SearchResults.tsx'
-import Footer from '../../../components/layout/Footer.tsx'
-import Header from '../../../components/layout/Header.tsx'
 import { useAiRecommendations } from '../../../hooks/useAiRecommendations.ts'
 import { useAuth } from '../../../hooks/useAuth.ts'
 import Content from '../components/Content.tsx'
@@ -23,8 +20,7 @@ function HomePage() {
 	const [searchResults, setSearchResults] = useState<MediaItem[]>([])
 	const [searchQuery, setSearchQuery] = useState('')
 	const [showResults, setShowResults] = useState(false)
-	const { recommendations: aiRecommendations, isLoading: isAiLoading } =
-		useAiRecommendations(user, allItems)
+	const { recommendations: aiRecommendations, isLoading: isAiLoading } = useAiRecommendations(user, allItems)
 
 	const handleSearch = (query: string) => {
 		setSearchQuery(query)
@@ -32,13 +28,8 @@ function HomePage() {
 			(item) =>
 				item.title.toLowerCase().includes(query.toLowerCase()) ||
 				item.description.toLowerCase().includes(query.toLowerCase()) ||
-				item.genres?.some((genre) =>
-					genre.toLowerCase().includes(query.toLowerCase())
-				) ||
-				(item.cast &&
-					item.cast.some((actor) =>
-						actor.toLowerCase().includes(query.toLowerCase())
-					))
+				item.genres?.some((genre) => genre.toLowerCase().includes(query.toLowerCase())) ||
+				(item.cast && item.cast.some((actor) => actor.toLowerCase().includes(query.toLowerCase())))
 		)
 
 		setSearchResults(results)
@@ -52,16 +43,10 @@ function HomePage() {
 	}
 
 	return (
-		<div className='min-h-screen bg-white dark:bg-zinc-900'>
-			<Header />
-			<SearchOverlay />
-
+		<div>
 			{showSearchField && (
 				<div className='fixed top-[120px] left-0 z-40 w-full bg-transparent'>
-					<SearchField
-						onSubmit={handleSearch}
-						placeholder={t('search.placeholder')}
-					/>
+					<SearchField onSubmit={handleSearch} placeholder={t('search.placeholder')} />
 				</div>
 			)}
 
@@ -69,10 +54,7 @@ function HomePage() {
 				<>
 					<Hero />
 					<main className='container mx-auto py-6'>
-						<Content
-							aiRecommendations={aiRecommendations}
-							isAiLoading={isAiLoading}
-						/>
+						<Content aiRecommendations={aiRecommendations} isAiLoading={isAiLoading} />
 					</main>
 				</>
 			) : (
@@ -84,14 +66,7 @@ function HomePage() {
 					<PricingSection />
 				</>
 			)}
-			<Footer />
-			{showResults && (
-				<SearchResults
-					results={searchResults}
-					query={searchQuery}
-					onClose={closeResults}
-				/>
-			)}
+			{showResults && <SearchResults results={searchResults} query={searchQuery} onClose={closeResults} />}
 		</div>
 	)
 }

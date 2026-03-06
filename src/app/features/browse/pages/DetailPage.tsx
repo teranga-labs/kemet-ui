@@ -19,9 +19,6 @@ import { Link, useNavigate, useParams } from 'react-router-dom'
 
 import { mockRooms } from '../../../../data/rooms.ts'
 import { allItems } from '../../../../data/shows.ts'
-import SearchOverlay from '../../../components/common/SearchOverlay.tsx'
-import Footer from '../../../components/layout/Footer.tsx'
-import Header from '../../../components/layout/Header.tsx'
 import { useSavedContent } from '../../../hooks/useSavedContent.ts'
 import ContentCarousel from '../components/ContentCarousel.tsx'
 
@@ -129,8 +126,6 @@ function DetailsPage() {
 
 	return (
 		<div className='relative min-h-screen bg-white text-black dark:bg-zinc-900 dark:text-white'>
-			<Header />
-			<SearchOverlay />
 
 			{showTeaser && item.teaserUrl && (
 				<div className='fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4'>
@@ -429,7 +424,6 @@ function DetailsPage() {
 					</div>
 				)}
 			</div>
-			<Footer />
 		</div>
 	)
 }

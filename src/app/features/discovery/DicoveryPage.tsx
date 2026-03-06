@@ -1,6 +1,4 @@
 import { Compass, Hash, Heart, Play, Share2 } from 'lucide-react'
-import Header from "../../components/layout/Header.tsx";
-import Footer from "../../components/layout/Footer.tsx";
 
 const categories = [
 	'Trending',
@@ -63,8 +61,7 @@ const discoveryItems = [
 
 function DiscoveryPage() {
 	return (
-		<div className='min-h-screen bg-zinc-900 pt-24 text-white'>
-			<Header />
+		<div className='min-h-screen bg-zinc-900 text-white'>
 			<div className='container mx-auto px-4 md:px-8'>
 				{/* Header */}
 				<div className='mb-8 flex items-end justify-between'>
@@ -132,7 +129,6 @@ function DiscoveryPage() {
 					))}
 				</div>
 			</div>
-			<Footer/>
 		</div>
 	)
 }

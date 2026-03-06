@@ -3,7 +3,6 @@ import logo from '/images/misc/logo.png'
 import { ChevronRight, CreditCard, Smartphone } from 'lucide-react'
 import { Link, useLocation } from 'react-router-dom'
 
-import Footer from '../../components/layout/Footer.tsx'
 
 function useQuery() {
 	return new URLSearchParams(useLocation().search)
@@ -128,7 +127,6 @@ function PaymentOptionsPage() {
 			</div>
 
 			{/* Footer */}
-			<Footer />
 		</div>
 	)
 }

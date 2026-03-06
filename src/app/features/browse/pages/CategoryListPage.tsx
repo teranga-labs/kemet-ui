@@ -1,8 +1,6 @@
 import { useParams } from 'react-router-dom'
 
 import MediaCard from '../../../components/common/MediaCard.tsx'
-import Footer from '../../../components/layout/Footer.tsx'
-import Header from '../../../components/layout/Header.tsx'
 import { allItems } from '../../../../data/shows.ts'
 
 function CategoryListPage() {
@@ -16,7 +14,6 @@ function CategoryListPage() {
 
 	return (
 		<div className='flex min-h-screen flex-col bg-white transition-colors duration-300 dark:bg-zinc-900'>
-			<Header />
 
 			<main className='container mx-auto mt-12 flex-1 px-2 py-3 pt-20 sm:px-6 lg:px-8'>
 				<h1 className='mb-8 text-3xl font-bold text-gray-900 capitalize dark:text-white'>
@@ -50,7 +47,6 @@ function CategoryListPage() {
 					</div>
 				)}
 			</main>
-			<Footer />
 		</div>
 	)
 }

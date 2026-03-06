@@ -1,8 +1,6 @@
 import { ChevronDown } from 'lucide-react'
 import { useState } from 'react'
 
-import Footer from '../../components/layout/Footer.tsx'
-import Header from '../../components/layout/Header.tsx'
 
 const faqData = [
 	{
@@ -68,7 +66,6 @@ function AccordionItem({ question, answer }: AccordionItemProps) {
 function InfoCenterPage() {
 	return (
 		<div className='flex min-h-screen flex-col bg-white dark:bg-zinc-900'>
-			<Header />
 
 			<main className='flex-grow py-24 pt-48 pb-24'>
 				<div className='container mx-auto px-6'>
@@ -92,7 +89,6 @@ function InfoCenterPage() {
 					</div>
 				</div>
 			</main>
-			<Footer />
 		</div>
 	)
 }

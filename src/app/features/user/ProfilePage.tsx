@@ -5,7 +5,6 @@ import { Edit, Plus, Settings } from 'lucide-react'
 import { useContext, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 
-import Footer from '../../components/layout/Footer.tsx'
 import type { Profile } from '../../contexts/ProfileContext.ts'
 import { ThemeContext } from '../../contexts/ThemeContext.ts'
 import { useAuth } from '../../hooks/useAuth.ts'
@@ -128,7 +127,6 @@ function ProfilePage() {
 					</div>
 				</div>
 			</div>
-			<Footer />
 		</div>
 	)
 }

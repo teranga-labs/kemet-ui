@@ -5,7 +5,6 @@ import { ChevronLeft, User } from 'lucide-react'
 import { type FormEvent, useContext, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 
-import Footer from '../../components/layout/Footer.tsx'
 import { ThemeContext } from '../../contexts/ThemeContext.ts'
 import { useAuth } from '../../hooks/useAuth.ts'
 
@@ -154,7 +153,6 @@ function AddProfilePage() {
 					</div>
 				</div>
 			</div>
-			<Footer />
 		</div>
 	)
 }

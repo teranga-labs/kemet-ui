@@ -3,8 +3,6 @@ import React, { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useNavigate } from 'react-router-dom'
 
-import Footer from '../../../components/layout/Footer.tsx'
-import Header from '../../../components/layout/Header.tsx'
 import { mockRooms } from '../../../../data/rooms.ts'
 import { allItems } from '../../../../data/shows.ts'
 
@@ -33,8 +31,7 @@ function WatchPartyJoinPage() {
 
 	return (
 		<div className='flex min-h-screen flex-col bg-white dark:bg-zinc-900'>
-			<Header />
-			<main className='container mx-auto mt-8 mb-6 flex-1 px-4 pt-24 sm:px-6 lg:px-8'>
+			<main className='container mx-auto mt-8 mb-6 flex-1 px-4 sm:px-6 lg:px-8'>
 				<h1 className='mb-8 text-center text-4xl font-bold text-gray-900 dark:text-white'>
 					{t('watchParty.join.title')}
 				</h1>
@@ -103,7 +100,6 @@ function WatchPartyJoinPage() {
 					</div>
 				)}
 			</main>
-			<Footer />
 		</div>
 	)
 }

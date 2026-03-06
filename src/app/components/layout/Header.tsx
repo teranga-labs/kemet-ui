@@ -1,5 +1,3 @@
-import logoBlack from '/images/misc/KEMET Black Bigger.png'
-import logoWhite from '/images/misc/KEMET White Bigger.png'
 import {
 	Bookmark,
 	Check,
@@ -17,54 +15,37 @@ import {
 	Users,
 	Video,
 	X
-} from 'lucide-react'
-import { useContext, useEffect, useState } from 'react'
-import { useTranslation } from 'react-i18next'
-import { Link, useLocation } from 'react-router-dom'
+} from 'lucide-react';
+import { useContext, useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
+import logoBlack from '/images/misc/KEMET Black Bigger.png';
+import logoWhite from '/images/misc/KEMET White Bigger.png';
 
-import { AuthContext } from '../../contexts/AuthContext.ts'
-import { ProfileContext } from '../../contexts/ProfileContext.ts'
-import { ThemeContext } from '../../contexts/ThemeContext.ts'
-import { useSearch } from '../../hooks/useSearch.ts'
+import { AuthContext } from '../../contexts/AuthContext.ts';
+import { ProfileContext } from '../../contexts/ProfileContext.ts';
+import { ThemeContext } from '../../contexts/ThemeContext.ts';
+import { useSearch } from '../../hooks/useSearch.ts';
 
 function Header() {
 	const { t } = useTranslation()
-	const [isScrolled, setIsScrolled] = useState(false)
-	const location = useLocation()
-	const isTransparentPage = () => {
-		return (
-			location.pathname === '/' || location.pathname.startsWith('/details/')
-		)
-	}
 	const [showProfileDropdown, setShowProfileDropdown] = useState(false)
 	const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 	const [showAuthDropdown, setShowAuthDropdown] = useState(false)
 
 	const themeContext = useContext(ThemeContext)
-	if (!themeContext)
-		throw new Error('Header must be used within a ThemeProvider')
+	if (!themeContext) throw new Error('Header must be used within a ThemeProvider')
 	const { theme, toggleTheme } = themeContext
 
 	const authContext = useContext(AuthContext)
-	if (!authContext)
-		throw new Error('Navbar must be used within an AuthProvider')
+	if (!authContext) throw new Error('Navbar must be used within an AuthProvider')
 	const { isAuthenticated, user, logout } = authContext
 
 	const profileContext = useContext(ProfileContext)
-	if (!profileContext)
-		throw new Error('Navbar must be used within a ProfileProvider')
+	if (!profileContext) throw new Error('Navbar must be used within a ProfileProvider')
 	const { activeProfile, setActiveProfile } = profileContext
 
 	const { handleToggleSearch } = useSearch()
-	useEffect(() => {
-		const handleScroll = () => {
-			setIsScrolled(window.scrollY > 50)
-		}
-		window.addEventListener('scroll', handleScroll)
-		return () => {
-			window.removeEventListener('scroll', handleScroll)
-		}
-	}, [])
 
 	const handleMouseEnter = () => {
 		setShowProfileDropdown(true)
@@ -82,22 +63,12 @@ function Header() {
 		if (profileToSwitch) setActiveProfile(profileToSwitch)
 		setShowProfileDropdown(false)
 	}
-	const isTransparent = isTransparentPage() && !isScrolled
-	const currentLogo = isTransparent || theme === 'dark' ? logoWhite : logoBlack
-	const navClasses = isTransparent
-		? 'bg-transparent border-b-gray-500/20'
-		: 'bg-white/80 dark:bg-zinc-900/80 backdrop-blur-sm shadow-sm border-b-gray-200 dark:border-b-zinc-800'
-	const linkClasses = isTransparent
-		? 'text-white hover:text-purple-300'
-		: 'text-gray-800 dark:text-gray-200 hover:text-purple-600 dark:hover:text-purple-400'
-	const iconClasses = isTransparent
-		? 'text-white'
-		: 'text-gray-800 dark:text-gray-200'
+	const currentLogo = theme === 'dark' ? logoWhite : logoBlack
+	const linkClasses = 'text-gray-700 dark:text-gray-200 hover:text-purple-600 dark:hover:text-purple-400'
+	const iconClasses = 'text-gray-700 dark:text-gray-200'
 	const isViewer = user?.role === 'viewer'
 	return (
-		<nav
-			className={`fixed top-0 z-50 w-full py-3 transition-all duration-300 ease-in-out ${navClasses}`}
-		>
+		<nav className='z-50 w-full py-3 transition-all duration-300 ease-in-out'>
 			<style>
 				{`
            .search-input:focus {
@@ -121,20 +92,14 @@ function Header() {
 			</style>
 			<div className='relative mt-2 flex w-full items-center justify-between px-4 sm:px-6 lg:px-8'>
 				<div className='flex items-center'>
-					<button
-						className={`lg:hidden ${iconClasses}`}
-						onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-					>
+					<button className={`lg:hidden ${iconClasses}`} onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
 						{mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
 					</button>
-					<Link to='/' className='hidden items-center space-x-2 lg:flex'>
-						<img src={currentLogo} alt='logo' className='h-16 w-auto' />
+					<Link to='/' className='hidden w-[78px] items-center justify-center lg:flex'>
+						<img src={currentLogo} alt='logo' className='h-14 w-auto' />
 					</Link>
 				</div>
-				<Link
-					to='/'
-					className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 lg:hidden'
-				>
+				<Link to='/' className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 lg:hidden'>
 					<img src={currentLogo} alt='logo' className='h-14 w-auto' />
 				</Link>
 				{/* Desktop navigation */}
@@ -168,8 +133,7 @@ function Header() {
 						className={`flex items-center text-xs font-extrabold whitespace-nowrap transition-colors lg:text-lg ${linkClasses}`}
 					>
 						<Users size={18} className='mr-1 hidden sm:inline' />
-						<span className='mr-1 hidden sm:inline'>WATCH</span>{' '}
-						{t('header.watchParty').split(' ')[1]}
+						<span className='mr-1 hidden sm:inline'>WATCH</span> {t('header.watchParty').split(' ')[1]}
 					</Link>
 					{user?.role === 'creator' && (
 						<Link
@@ -202,34 +166,20 @@ function Header() {
 									{t('header.subscribe')}
 								</Link>
 							)}
-							<div
-								className='relative'
-								onMouseEnter={handleMouseEnter}
-								onMouseLeave={handleMouseLeave}
-							>
+							<div className='relative' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
 								<button
 									onClick={() => setShowProfileDropdown((prev) => !prev)}
 									className='flex items-center space-x-2 py-1 pr-1 pl-2 transition-colors lg:px-3'
 								>
-									<div
-										className={`flex h-10 w-10 items-center justify-center rounded-full text-white transition-colors hover:bg-purple-700 ${
-											isTransparent && !showProfileDropdown
-												? 'bg-transparent'
-												: 'bg-purple-700'
-										}`}
-									>
+									<div className='flex h-10 w-10 items-center justify-center rounded-full bg-purple-700 text-white transition-colors hover:bg-purple-600'>
 										<User size={24} />
 									</div>
 								</button>
 								{showProfileDropdown && (
 									<div className='absolute top-full right-0 z-50 w-64 rounded-md border border-gray-200 bg-white py-1 text-black shadow-lg dark:border-zinc-700 dark:bg-zinc-900 dark:text-gray-200'>
 										<div className='mb-1 border-b border-gray-100 px-4 py-2 dark:border-zinc-700'>
-											<p className='text-lg font-extrabold text-black dark:text-white'>
-												{user?.name}
-											</p>
-											<p className='truncate text-xs text-gray-600 dark:text-gray-400'>
-												{user?.email}
-											</p>
+											<p className='text-lg font-extrabold text-black dark:text-white'>{user?.name}</p>
+											<p className='truncate text-xs text-gray-600 dark:text-gray-400'>{user?.email}</p>
 											{activeProfile && (
 												<div className='mt-2 flex items-center'>
 													<img
@@ -245,9 +195,7 @@ function Header() {
 											)}
 											{user?.subscriptionPlan === null ? (
 												<div className='mt-1'>
-													<p className='text-xs text-red-600'>
-														{t('header.noSubscription')}
-													</p>
+													<p className='text-xs text-red-600'>{t('header.noSubscription')}</p>
 													<Link
 														to='/payment-flow'
 														className='mt-1 inline-block text-xs font-medium text-purple-600 hover:text-purple-800 dark:text-purple-400 dark:hover:text-purple-300'
@@ -269,8 +217,7 @@ function Header() {
 											className='flex w-full items-center px-4 py-2 text-left text-sm hover:bg-gray-100 dark:hover:bg-zinc-800'
 											onClick={() => setShowProfileDropdown(false)}
 										>
-											<Bookmark size={16} className='mr-2' />{' '}
-											{t('header.savedContent')}
+											<Bookmark size={16} className='mr-2' /> {t('header.savedContent')}
 										</Link>
 										{user?.profiles && user.profiles.length > 1 && (
 											<>
@@ -285,18 +232,11 @@ function Header() {
 															onClick={() => handleProfileSwitch(profile.id)}
 															className='flex w-full items-center rounded px-2 py-2 text-left text-sm hover:bg-gray-100 dark:hover:bg-zinc-800'
 														>
-															<img
-																src={profile.avatar}
-																alt={profile.name}
-																className='mr-2 h-8 w-8 rounded-full'
-															/>
+															<img src={profile.avatar} alt={profile.name} className='mr-2 h-8 w-8 rounded-full' />
 															<span className='flex-1'>
-																{profile.name}{' '}
-																{profile.isKid && t('header.childProfile')}
+																{profile.name} {profile.isKid && t('header.childProfile')}
 															</span>
-															{activeProfile?.id === profile.id && (
-																<Check size={16} className='text-purple-600' />
-															)}
+															{activeProfile?.id === profile.id && <Check size={16} className='text-purple-600' />}
 														</button>
 													))}
 												</div>
@@ -308,8 +248,7 @@ function Header() {
 												className='flex items-center px-4 py-2 text-sm hover:bg-gray-100 sm:hidden dark:hover:bg-zinc-800'
 												onClick={() => setShowProfileDropdown(false)}
 											>
-												<Crown size={16} className='mr-2' />{' '}
-												{t('header.subscribeNow')}
+												<Crown size={16} className='mr-2' /> {t('header.subscribeNow')}
 											</Link>
 										)}
 										<Link
@@ -317,8 +256,7 @@ function Header() {
 											className='flex items-center px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-zinc-800'
 											onClick={() => setShowProfileDropdown(false)}
 										>
-											<Users size={16} className='mr-2' />{' '}
-											{t('header.manageProfiles')}
+											<Users size={16} className='mr-2' /> {t('header.manageProfiles')}
 										</Link>
 										{isViewer && (
 											<Link
@@ -326,8 +264,7 @@ function Header() {
 												className='flex items-center px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-zinc-800'
 												onClick={() => setShowProfileDropdown(false)}
 											>
-												<Sparkles size={16} className='mr-2' />{' '}
-												{t('header.becomeCreator')}
+												<Sparkles size={16} className='mr-2' /> {t('header.becomeCreator')}
 											</Link>
 										)}
 										{(user?.role === 'admin' || user?.role === 'creator') && (
@@ -341,8 +278,7 @@ function Header() {
 												className='flex items-center px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-zinc-800'
 												onClick={() => setShowProfileDropdown(false)}
 											>
-												<Shield size={16} className='mr-2' />{' '}
-												{t('header.adminPortal')}
+												<Shield size={16} className='mr-2' /> {t('header.adminPortal')}
 											</Link>
 										)}
 										{user?.role === 'creator' && (
@@ -353,8 +289,7 @@ function Header() {
 												className='flex items-center px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-zinc-800'
 												onClick={() => setShowProfileDropdown(false)}
 											>
-												<Video size={16} className='mr-2' />{' '}
-												{t('header.creatorPortal')}
+												<Video size={16} className='mr-2' /> {t('header.creatorPortal')}
 											</Link>
 										)}
 										<div className='mt-1 border-t border-gray-100 dark:border-zinc-700'></div>
@@ -379,10 +314,7 @@ function Header() {
 						<div className='flex items-center'>
 							{/* Desktop Auth Buttons & Theme Toggle */}
 							<div className='hidden items-center space-x-3 lg:flex'>
-								<Link
-									to='/signin'
-									className={`text-base font-bold transition-colors ${linkClasses} whitespace-nowrap`}
-								>
+								<Link to='/signin' className={`text-base font-bold transition-colors ${linkClasses} whitespace-nowrap`}>
 									{t('header.signIn')}
 								</Link>
 								<Link
@@ -408,20 +340,12 @@ function Header() {
 										className='flex items-center space-x-1 py-1 pr-1 pl-2 transition-colors'
 										aria-label='Open authentication menu'
 									>
-										<div
-											className={`flex h-10 w-10 items-center justify-center rounded-full text-white transition-colors hover:bg-purple-700 ${
-												isTransparent && !showAuthDropdown
-													? 'bg-transparent'
-													: 'bg-purple-700'
-											}`}
-										>
+										<div className='flex h-10 w-10 items-center justify-center rounded-full bg-purple-700 text-white transition-colors hover:bg-purple-600'>
 											<User size={24} />
 										</div>
 										<ChevronDown
 											size={16}
-											className={`transition-transform ${iconClasses} ${
-												showAuthDropdown ? 'rotate-180' : ''
-											}`}
+											className={`transition-transform ${iconClasses} ${showAuthDropdown ? 'rotate-180' : ''}`}
 										/>
 									</button>
 									{showAuthDropdown && (
@@ -461,10 +385,7 @@ function Header() {
 				<div className='border-t border-gray-200 bg-white/95 text-black backdrop-blur-sm lg:hidden dark:border-zinc-800 dark:bg-zinc-900/95 dark:text-white'>
 					<div className='space-y-4 px-4 py-3'>
 						<form className='flex items-center border-b border-gray-200 pb-2 dark:border-zinc-700'>
-							<Search
-								size={18}
-								className='mr-2 text-gray-500 dark:text-gray-400'
-							/>
+							<Search size={18} className='mr-2 text-gray-500 dark:text-gray-400' />
 							<input
 								type='search'
 								placeholder={t('header.searchPlaceholder')}

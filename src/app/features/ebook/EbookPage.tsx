@@ -2,8 +2,6 @@ import { Book, BookOpen, Star } from 'lucide-react';
 
 
 
-import Footer from "../../components/layout/Footer.tsx";
-import Header from '../../components/layout/Header.tsx'
 
 
 
@@ -65,8 +63,7 @@ const library = [
 
 function EbookPage() {
 	return (
-		<div className='min-h-screen bg-zinc-900 pt-24 text-white'>
-			<Header />
+		<div className='min-h-screen bg-zinc-900 text-white'>
 			<div className='container mx-auto px-4 md:px-8'>
 				{/* Featured Header */}
 				<div className='mb-16 flex flex-col gap-8 rounded-2xl bg-gradient-to-r from-gray-900 to-gray-800 p-8 md:flex-row md:items-center'>
@@ -130,7 +127,6 @@ function EbookPage() {
 					))}
 				</div>
 			</div>
-			<Footer/>
 		</div>
 	)
 }

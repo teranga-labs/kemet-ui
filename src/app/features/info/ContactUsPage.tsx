@@ -1,7 +1,5 @@
 import { Film, Mail, Megaphone } from 'lucide-react'
 
-import Footer from '../../components/layout/Footer.tsx'
-import Header from '../../components/layout/Header.tsx'
 
 function ContactUsPage() {
 	const contactMethods = [
@@ -36,7 +34,6 @@ function ContactUsPage() {
 
 	return (
 		<div className='flex min-h-screen flex-col bg-white dark:bg-zinc-900'>
-			<Header />
 
 			<main className='flex flex-grow items-center py-24 pt-32'>
 				<div className='container mx-auto px-6'>
@@ -73,7 +70,6 @@ function ContactUsPage() {
 					</div>
 				</div>
 			</main>
-			<Footer />
 		</div>
 	)
 }

@@ -3,7 +3,6 @@ import logo from '/images/misc/logo.png'
 import { BadgeCheck, Calendar, Tv } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
-import Footer from '../../components/layout/Footer.tsx'
 import { useAuth } from '../../hooks/useAuth.ts'
 
 const plans = [
@@ -143,7 +142,6 @@ function SubscriptionPage() {
 			</div>
 
 			{/* Footer */}
-			<Footer />
 		</div>
 	)
 }

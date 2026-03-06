@@ -4,7 +4,6 @@ import { CheckCircle } from 'lucide-react'
 import React, { useRef, useState } from 'react'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 
-import Footer from '../../components/layout/Footer.tsx'
 import { useAuth } from '../../hooks/useAuth.ts'
 import { useSubscription } from '../../hooks/useSubscription.ts'
 
@@ -186,7 +185,6 @@ function ConfirmPaymentPage() {
 			</div>
 
 			{/* Footer */}
-			<Footer />
 		</div>
 	)
 }

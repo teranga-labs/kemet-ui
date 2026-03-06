@@ -3,8 +3,6 @@ import { useTranslation } from 'react-i18next'
 
 import MediaCard from '../../../components/common/MediaCard.tsx'
 import SearchField from '../../../components/common/SearchField.tsx'
-import Footer from '../../../components/layout/Footer.tsx'
-import Header from '../../../components/layout/Header.tsx'
 import { allItems } from '../../../../data/shows.ts'
 
 const genreOptions = [
@@ -71,8 +69,7 @@ function LiveCatalogPage() {
 
 	return (
 		<div className='flex min-h-screen flex-col bg-white dark:bg-zinc-900'>
-			<Header />
-			<main className='container mx-auto mt-6 mb-6 flex-1 px-4 pt-24 sm:px-6 lg:px-8'>
+			<main className='container mx-auto mt-6 mb-6 flex-1 px-4 sm:px-6 lg:px-8'>
 				<div className='mb-2 flex border-b border-gray-200 dark:border-zinc-800'>
 					<button
 						className={`px-4 py-2 font-medium transition-colors ${
@@ -168,7 +165,6 @@ function LiveCatalogPage() {
 					</div>
 				)}
 			</main>
-			<Footer />
 		</div>
 	)
 }

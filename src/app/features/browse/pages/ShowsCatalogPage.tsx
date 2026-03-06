@@ -3,8 +3,6 @@ import { useTranslation } from 'react-i18next'
 
 import MediaCard from '../../../components/common/MediaCard.tsx'
 import SearchField from '../../../components/common/SearchField.tsx'
-import Footer from '../../../components/layout/Footer.tsx'
-import Header from '../../../components/layout/Header.tsx'
 import { allItems } from '../../../../data/shows.ts'
 
 const genreOptions = [
@@ -54,8 +52,7 @@ function ShowsCatalogPage() {
 
 	return (
 		<div className='flex min-h-screen flex-col bg-white dark:bg-zinc-900'>
-			<Header />
-			<main className='container mx-auto mt-6 mb-6 flex-1 px-4 pt-24 sm:px-6 lg:px-8'>
+			<main className='container mx-auto mt-6 mb-6 flex-1 px-4 sm:px-6 lg:px-8'>
 				<h1 className='mb-2 text-4xl font-bold text-gray-900 dark:text-white'>
 					{t('showCatalog.title')}{' '}
 					<span className='h-4 w-4 rounded-full text-purple-700'>.</span>
@@ -120,7 +117,6 @@ function ShowsCatalogPage() {
 					</div>
 				)}
 			</main>
-			<Footer />
 		</div>
 	)
 }

@@ -4,7 +4,6 @@ import { Calendar, Lock, Phone, User } from 'lucide-react'
 import { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 
-import Footer from '../../components/layout/Footer.tsx'
 
 function useQuery() {
 	return new URLSearchParams(useLocation().search)
@@ -223,7 +222,6 @@ function PaymentDetailsPage() {
 			</div>
 
 			{/* Footer */}
-			<Footer />
 		</div>
 	)
 }

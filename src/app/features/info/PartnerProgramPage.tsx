@@ -11,16 +11,13 @@ import {
 } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
-import Footer from '../../components/layout/Footer'
-import Header from '../../components/layout/Header'
 
 function PartnerProgramPage() {
 	return (
 		<div className='flex min-h-screen flex-col bg-white dark:bg-zinc-900'>
-			<Header />
 
 			<main className='flex-grow'>
-				<div className='relative flex h-[60vh] items-center justify-center px-4 pt-24 text-center'>
+				<div className='relative flex h-[60vh] items-center justify-center px-4 text-center'>
 					<img
 						src={baobabs}
 						alt='Filmmaker at work'
@@ -175,7 +172,6 @@ function PartnerProgramPage() {
 				</div>
 			</main>
 
-			<Footer />
 		</div>
 	)
 }
