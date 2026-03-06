@@ -21,7 +21,7 @@ const sidebarItems = [
 		icon: BookOpen
 	},
 	{
-		name: 'Green Light',
+		name: 'Green',
 		path: '/green-light',
 		icon: Zap
 	}
@@ -38,7 +38,7 @@ function Sidebar() {
 		<>
 			{/* Desktop Sidebar */}
 			<aside className='hidden h-full w-[78px] shrink-0 flex-col items-center justify-center sm:flex'>
-				<div className='flex flex-col items-center gap-1'>
+				<div className='flex flex-col items-center gap-2'>
 					{sidebarItems.map((item) => (
 						<NavLink key={item.name} to={item.path} end={item.path === '/'}>
 							{({ isActive }) => (
@@ -54,7 +54,7 @@ function Sidebar() {
 									}`}
 								>
 									<item.icon
-										size={22}
+										size={20}
 										fill={isActive ? 'currentColor' : 'none'}
 										className={`transition-colors duration-200 ${
 											isActive

@@ -90,7 +90,7 @@ function Header() {
         }
       `}
 			</style>
-			<div className='relative mt-2 flex w-full items-center justify-between px-4 sm:px-6 lg:px-8'>
+			<div className='relative mt-2 flex w-full items-center justify-between px-3 sm:px-6 lg:px-2'>
 				<div className='flex items-center'>
 					<button className={`lg:hidden ${iconClasses}`} onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
 						{mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
